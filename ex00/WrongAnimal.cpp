@@ -31,7 +31,7 @@ WrongAnimal& WrongAnimal::operator=(const WrongAnimal& src)
 
 void WrongAnimal::makeSound(void) const
 {
-	std::cout << "WrongAnimal class called. Your code is wrong.\n";
+	std::cout << "こんにちは。\n";
 }
 
 std::string WrongAnimal::getType(void) const
