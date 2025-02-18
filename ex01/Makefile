@@ -1,10 +1,10 @@
 C++ = c++
 C++_FLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
-INFILES = 	main.cpp Animal.cpp Cat.cpp Dog.cpp WrongCat.cpp WrongAnimal.cpp
+INFILES = 	main.cpp Animal.cpp Cat.cpp Dog.cpp WrongCat.cpp WrongAnimal.cpp Brain.cpp
 
 OBJFILES = $(INFILES:.cpp=.o)
 
-NAME = Polymorphism
+NAME = I_dont_want_to_set_the_world_on_fire
 
 all: $(NAME)
 

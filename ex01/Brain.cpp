@@ -22,15 +22,15 @@ Brain& Brain::operator=(const Brain& src)
 	return (*this);
 }
 
-std::string const	&Brain::getIdea(int const &index) const
+std::string const	&Brain::getIdea(int const index) const
 {
 	if (index >= 0 && index < 100)
-		return (this->_ideas[index]);
-	return (this->_ideas[0]);
+		return (this->ideas[index]);
+	return (this->ideas[0]);
 }
 
 void	Brain::setIdea(std::string const &idea, int const &index)
 {
 	if (index >= 0 && index < 100)
-		this->_ideas[index] = idea;
+		this->ideas[index] = idea;
 }
