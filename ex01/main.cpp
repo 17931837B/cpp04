@@ -6,12 +6,14 @@
 
 int main(void)
 {
-	Animal* animalList[42];
+	const int N = 42;
+	Animal* animalList[N];
 	Brain* firstAnimalBrain;
+	Animal* copiedAnimal;
 	size_t i;
 
 	i = 0;
-	while (i < 42)
+	while (i < N)
 	{
 		if (i % 2)
 			animalList[i] = new Dog();
@@ -35,7 +37,7 @@ int main(void)
 	std::cout << "-------------------------------------\n";
 
 	animalList[0]->getBrain().setIdea("Original Idea 1", 0);
-	Animal* copiedAnimal = new Dog(*(Dog*)animalList[0]);
+	copiedAnimal = new Cat(*(Cat*)animalList[0]);
 	copiedAnimal->getBrain().setIdea("Copied Idea 1", 0);
 	std::cout << "Original Animal's Idea 1: " << animalList[0]->getBrain().getIdea(0) << std::endl;
 	std::cout << "Copied Animal's Idea 1: " << copiedAnimal->getBrain().getIdea(0) << std::endl;
@@ -43,7 +45,7 @@ int main(void)
 	std::cout << "-------------------------------------\n";
 
 	i = 0;
-	while (i < 42)
+	while (i < N)
 	{
 		delete animalList[i];
 		i++;
