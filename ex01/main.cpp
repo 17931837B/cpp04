@@ -44,14 +44,13 @@ int main(void)
 	std::cout << "1st idea: " << animalList[0]->getBrain().getIdea(0) << std::endl;
 	std::cout << "2nd idea: " << animalList[0]->getBrain().getIdea(1) << std::endl;
 	std::cout << "3rd idea: " << animalList[0]->getBrain().getIdea(2) << std::endl;
-
-	std::cout << "-------------------------------------\n";
-
 	animalList[0]->getBrain().setIdea("Original Idea 1", 0);
 	copiedAnimal = new Cat(*(Cat*)animalList[0]);
 	copiedAnimal->getBrain().setIdea("Copied Idea 1", 0);
 	std::cout << "Original Animal's Idea 1: " << animalList[0]->getBrain().getIdea(0) << std::endl;
 	std::cout << "Copied Animal's Idea 1: " << copiedAnimal->getBrain().getIdea(0) << std::endl;
+	std::cout << "Original Animal's Idea 2: " << animalList[0]->getBrain().getIdea(1) << std::endl;
+	std::cout << "Copied Animal's Idea 2: " << copiedAnimal->getBrain().getIdea(1) << std::endl;
 
 	std::cout << "-------------------------------------\n";
 
