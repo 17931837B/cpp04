@@ -36,12 +36,7 @@ WrongCat::WrongCat(const WrongCat& copy) : WrongAnimal(copy)
 WrongCat& WrongCat::operator=(const WrongCat& src) 
 {
 	if (this != &src)
-	{
-		delete this->brain;
-		this->brain = new Brain(*(src.brain));
-		// *this->brain = *src.brain;
 		this->type = src.type;
-	}
 	return (*this);
 }
 
